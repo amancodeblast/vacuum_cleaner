@@ -51,13 +51,13 @@ def generate_launch_description():
         ),
     ]
     actions.append(Node(
-        package='ros2_turtlebot',
+        package='vacuum_cleaner',
         executable='walker',
     ))
     if rosbag_record=='record:=True':
         actions.append(
             ExecuteProcess(
-                cmd=["ros2", "bag", "record", "-o", "ros2_turtlebot_bag", "-a"]
+                cmd=["ros2", "bag", "record", "-o", "vacuum_cleaner_bag", "-a"]
             )
         )
     return LaunchDescription(actions)
