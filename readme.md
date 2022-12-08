@@ -1,7 +1,8 @@
 [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](LICENSE.md)
 # Beginers Tutorial 
 ## A simple Week 12 808x:Soft Development
-
+### Output of the Turtlebot in Gazebo
+![output](results/turtlebot.png)
 ### Dependencies
 * Installed on Linux (Ubuntu 22.04)
 * Ros 2 Humble installed 
@@ -89,4 +90,12 @@ Open a new terminal, navigate to ros2_ws, and source the setup files:
   cd ~/ros2_ws
   . install/setup.bash
   ros2 run vacuum_cleaner walker.py
+  ```
+
+- Open another new terminal
+
+  ```
+  cd ~/ros2_ws
+  . install/setup.bash
+  ros2 bag play vacuum_cleaner_bag
   ```
