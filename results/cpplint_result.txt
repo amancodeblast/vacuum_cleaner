@@ -1,0 +1,2 @@
+Done processing ./src/vacuum.cpp
+Total errors found: 2
