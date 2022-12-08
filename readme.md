@@ -16,6 +16,24 @@ cd ~/ros2_ws/src
 
 </details>
 
+
+## Installation of the Turtlebot package
+1. All turtlebot3 pakages install
+    ```bash
+    sudo apt install ros-humble-turtlebot3*
+    ```
+2. Humble and Gazebo ROS packages
+    ```bash
+    sudo apt install ros-humble-gazebo-ros-pkgs 
+    ```
+3. Set up gazebo model path 
+    ```bash
+    export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:`ros2 pkg \
+    prefix turtlebot3_gazebo \
+    `/share/turtlebot3_gazebo/models/
+    ```
+
+
 ### Building this package
 These simple steps are to be followed to replicate the work of this repository from scratch
 
@@ -47,3 +65,28 @@ Open a new terminal, navigate to ros2_ws, and source the setup files:
 ```xml
 . install/setup.bash
 ```
+</details>
+
+### Run Instructions 
+- Record with ROS Bag
+
+  ```
+  . install/setup.bash
+  ros2 launch vacuum_cleaner walker.py record:=True
+  ```
+
+- To view ros_bag info
+
+  ```
+  ros2 bag info vacuum_cleaner_bag
+  ```
+
+### To play from ROS Bag
+
+- On a new terminal
+
+  ```
+  cd ~/ros2_ws
+  . install/setup.bash
+  ros2 run vacuum_cleaner walker.py
+  ```
